@@ -2,6 +2,8 @@
 
 Prototype: [Figma](https://www.figma.com/proto/asXbI2SHBcpD236mhCoVIN/Onboarding-Screen?type=design&node-id=1-323&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A323)
 
+Live version: https://m4rkux.github.io/ProjectMark-challenge
+
 Technologies used:
 
 - [Vue](https://vuejs.org/)
