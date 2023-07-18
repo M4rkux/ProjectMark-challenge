@@ -23,7 +23,12 @@ defineProps<{ label: string, isChecked: boolean }>()
     @apply appearance-none bg-white border-2 border-opacity-20 border-slate-500 rounded-[4px] w-4 h-4 cursor-pointer;
 
     &:checked {
-      @apply bg-blue-500 border-transparent;
+      @apply bg-blue-500 border-transparent relative;
+
+      &::after {
+        @apply text-white top-0 absolute mt-[-5px];
+        content: '✓';
+      }
     }
   }
 
