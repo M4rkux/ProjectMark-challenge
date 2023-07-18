@@ -15,7 +15,7 @@ const cards = computed(() => {
   if (isCustom.value && customCardsConfig.content.length > 0) {
     return customCardsConfig.content
   }
-  return cardsConfig[level.value as keyof typeof cardsConfig].content
+  return cardsConfig[level.value as keyof typeof cardsConfig]?.content
 })
 
 function restoreCustom() {
@@ -23,7 +23,11 @@ function restoreCustom() {
 }
 
 function deleteFromCustom(title: string) {
-  customCardsConfig.content = customCardsConfig.content.filter(content => content.title !== title)
+  if (customCardsConfig.content.length > 1) {
+    customCardsConfig.content = customCardsConfig.content.filter(content => content.title !== title)
+  } else {
+    alert('You need at least one column')
+  }
 }
 
 </script>
